@@ -1,0 +1,31 @@
+<div class="container">
+  <div>
+  <h2>Ajouter une musicienne :</h2>
+  </div>
+ 
+  <form >
+  <div class="col-sm-2 col-md-2 col-lg-2">
+  <label >ID musicienne</label>
+  <input type="text" [(ngModel)]="newMusicienne.id"
+  name="id" class="form-control">
+  </div>
+  <div class="col-sm-4 col-md-4 col-lg-4" >
+  <label >Nom Musicienne</label>
+  <input type="text"[(ngModel)]= "newMusicienne.nomMusicienne"
+  name="nomMusicienne" class="form-control">
+  </div>
+  <div class="col-sm-2 col-md-2 col-lg-2">
+  <label >Lieu</label>
+  <input type="string" [(ngModel)]= "newMusicienne.Lieu"
+  name="Lieu" class="form-control">
+  </div>
+  <div class="col-sm-4 col-md-4 col-lg-4">
+  <label >Date Debut</label>
+  <input type="date" [(ngModel)]= "newMusicienne.dateDebut"
+  name="dateDebut" class="form-control">
+  </div>
+  <div class="mt-2">
+  <button type="submit" (click)="addMusicienne()" class="btn btn-success">Ajouter</button>
+  </div>
+  </form>
+  </div>

@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="card shadow mb-4">
+  <div class="card-body">
+  <table class="table table-striped">
+  <tr> <th>Id</th><th>Nom</th> <th>Lieu</th> <th>Date Debut</th> </tr>
+  <tbody *ngFor="let musicienne of Musiciennes">
+  <tr >
+  <td>{{musicienne.id}}</td>
+  <td>{{musicienne.nomMusicienne}}</td>
+  <td>{{musicienne.Lieu}}</td>
+  <td>{{musicienne.dateDebut | date:'dd/MM/yyyy'}}</td>
+
+  <td><a class="btn btn-danger" (click)="supprimerMusicienne(musicienne)">Supprimer</a></td>
+  <td><a class="btn btn-success" [routerLink]="['/updateMusicienne',musicienne.id]">Modifier</a></td>
+
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  </div>
+  </div>
